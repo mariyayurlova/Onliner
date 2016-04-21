@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Demo Test Plan" verbose="1">
+	
+	<test name="Functional Tests" preserve-order="true">
+		<parameter name="insert" value="Каталог"/>
+		<parameter name="catalog" value="Электроника"/>
+		<parameter name="section" value="Телевизоры"/>
+		<parameter name="manufacturer" value="Samsung"/>
+		<parameter name="price" value="10 000 000"/>
+		<parameter name="date" value="2013"/>
+		<parameter name="diagonalFrom" value="37"/>
+		<parameter name="diagonalTo" value="42"/>
+
+		<classes>
+ 			<class name="demo.test.OnlinerTest" />
+        </classes>
+	</test>
+</suite>
