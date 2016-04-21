@@ -132,7 +132,7 @@ public class SearchForm extends BaseForm {
             list.get(i).click();
             try{
 
-                if((resultForm.testName(manufacturer) == true) & (resultForm.testDiagonl(diagonalFrom,diagonalTo)==true) & (resultForm.testDate(date)==true) & (resultForm.testPrice(price)==true)){
+                if((resultForm.testName(manufacturer) == true) & (resultForm.testDiagonl(diagonalFrom,diagonalTo)==true) & (resultForm.testDate(date)==true)){
 
                     browser.goBack();
                 }
