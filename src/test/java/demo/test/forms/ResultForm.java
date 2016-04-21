@@ -82,11 +82,9 @@ public class ResultForm extends BaseForm {
 
         Label lblPrice = new Label (By.xpath("//div[@class='b-offers-desc__info-price']/div/a"));
         String  priceR = lblPrice.getText();
-        info(price);
         String result = String.valueOf(priceR.split(" –")[0]);
         String priceP = price.replaceAll(" ", "");
         String resultR = result.replaceAll(" ", "");
-        info(result);
         int priceResultFirst = new Integer(priceP).intValue();
         int priceResultSecond = new Integer(resultR).intValue();
         if (priceResultFirst >= priceResultSecond){
@@ -113,7 +111,6 @@ public class ResultForm extends BaseForm {
         String  diagonalR = lblDiagonal.getText();
 
         String result = String.valueOf(diagonalR.split("\"")[0]);
-        info(result);
         int diagonalResultFirst = Integer.parseInt(diagonalFrom);
         int diagonalResultSecond = Integer.parseInt(result);
         int diagonalResultThree = Integer.parseInt(diagonalTo);
