@@ -119,15 +119,15 @@ public class SearchForm extends BaseForm {
      */
     public void checkResult(String manufacturer, String date, String diagonalFrom, String diagonalTo, String price) throws InterruptedException {
         browser.webDriverWait("schema-product__title");
-        assert(lblIsPresent.isPresent());
+        Label lblCheck = new Label(By.xpath("//div[@id='schema-filter']/following-sibling::div//span[contains(text(),'Найдено')]"),"");
+        lblCheck.waitForIsElementPresent();
         List<WebElement> list = beList.findElements("//div[@class='schema-product__title']/a[@data-bind='attr: {href: product.html_url}']/span[@data-bind='html: product.full_name']");
         info(String.valueOf(list.size()));
+
         browser.webDriverWait("schema-product__title");
-        assert(lblIsPresent.isPresent());
         for (int i=0; i<list.size(); i++) {
             ResultForm resultForm = new ResultForm();
             browser.webDriverWait("schema-product__title");
-            assert(lblIsPresent.isPresent());
             list = beList.findElements("//div[@class='schema-product__title']/a[@data-bind='attr: {href: product.html_url}']/span[@data-bind='html: product.full_name']");
             list.get(i).click();
             try{
