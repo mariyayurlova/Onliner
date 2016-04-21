@@ -15,41 +15,36 @@ public class OnlinerTest extends BaseTest {
     public void runTest() throws InterruptedException {
 
 
-        logger.step(1-3);
+        logger.step(1);
         MainForm mainForm = new MainForm();
-        mainForm.assertLogo();
         mainForm.searchCatalogLabel(insert);
-        mainForm.assertCatalogOpen();
 
 
-        logger.step(4-5);
+        logger.step(2);
         CatalogForm catalogForm = new CatalogForm();
-        catalogForm.assertLogo();
         catalogForm.checkCatalog(catalog);
 
-        logger.step(6-7);
+        logger.step(3);
         catalogForm.checkSection(section);
-        catalogForm.testingSection(section);
 
 
-        logger.step(8-9);
+        logger.step(4);
         SearchForm searchForm = new SearchForm();
-        searchForm.assertLogo();
         searchForm.checkManufacturer(manufacturer);
 
-        logger.step(10);
+        logger.step(5);
         searchForm.inputPrice(price);
 
-        logger.step(11);
+        logger.step(6);
         searchForm.inputDate(date);
 
-        logger.step(12);
+        logger.step(7);
         searchForm.selectDiagonalFrom(diagonalFrom);
 
-        logger.step(13);
+        logger.step(8);
         searchForm.selectDiagonalTo(diagonalTo);
 
-        logger.step(14);
+        logger.step(9);
         searchForm.checkResult(manufacturer, date, diagonalFrom, diagonalTo, price);
 
 
